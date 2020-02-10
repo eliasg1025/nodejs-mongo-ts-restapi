@@ -12,7 +12,7 @@ app.use(morgan('dev'))
 app.use(express.urlencoded({ extended: false }))
 
 // Routes
-import routes from './routes/index'
-app.use(routes)
+import authRoutes from './routes/authRoutes'
+app.use('/api/auth', authRoutes)
 
 export default app
