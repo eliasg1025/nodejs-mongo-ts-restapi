@@ -1,10 +1,10 @@
-import app from 'app'
+import app from './app'
+import './database'
 
-const PORT =  process.env.PORT || 8000
 
-function init() {
+function main() {
     app.listen(app.get('port'))
     console.log(`Server is running on: http://127.0.0.1:${app.get('port')}`)
 }
 
-init()
+main()

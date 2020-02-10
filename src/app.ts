@@ -11,4 +11,8 @@ app.use(express.json())
 app.use(morgan('dev'))
 app.use(express.urlencoded({ extended: false }))
 
+// Routes
+import routes from './routes/index'
+app.use(routes)
+
 export default app
