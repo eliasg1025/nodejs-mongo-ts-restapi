@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-mongoose.connect('mongodb+srv://codigo2020:backend2020@cluster0-kf1fx.mongodb.net/test?retryWrites=true&w=majority', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/test', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
